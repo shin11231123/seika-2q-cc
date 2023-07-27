@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body{
+	background-color: black;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.box {
+  margin       : auto;
+  width        : 150px;
+  height       : 150px;
+  background-color: rgb(58, 0, 151);
+}
+
+.controls{
+	margin-top: 20px;
+}
+
+.player {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.control-button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.control-button:hover {
+  background-color: #45a049;
+}
+
+.animetion{
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	background-color: red;
+	z-index: -1;
+}
+
+.animetion span{
+	border: 2px solid #fff;
+	position: absolute;
+}
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  /* background: #f00; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader span {
+  position: absolute;
+  top: -10;
+  left: -10;
+  width: 150%;
+  height: 150%;
+  border: 3px solid #41bf5c;
+  animation: animate 5s linear infinite;
+}
+
+.loader span:nth-child(1) {
+  /* border-radius: 50%; */
+  border-radius: 86% 14% 55% 45% / 25% 68% 32% 75%;
+}
+
+.loader span:nth-child(2) {
+  animation-direction: reverse;
+  border-radius: 32% 68% 11% 89% / 63% 32% 68% 37%;
+}
+
+.loader span:nth-child(3) {
+  animation-duration: 3s;
+  border-radius: 43% 57% 55% 45% / 82% 60% 40% 18%;
+}
+
+
+
+
+
+
+
+
+</style>
+<body>
+  <div class="container">
+
+    <div class="player">
+	<div class="box" id="box"></div>
+
+      <audio controls class="controls">
+		<source src="../music/Straykids-MANIAC.mp3">
+	</audio>
+
+      <div id="player-controls">
+        <button id="toggle-button" class="control-button" onclick="toggleAnimation()">Play</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="loader">
+      <span id="span1"></span>
+      <span id="span2"></span>
+      <span id="span3"></span>
+    </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
