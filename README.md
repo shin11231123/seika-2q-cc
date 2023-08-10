@@ -13,3 +13,4 @@ npm run build
 ```
 npm run browser-sync
 ```
+# seika-2q-finaltask
