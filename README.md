@@ -16,3 +16,4 @@ npm run browser-sync
 3.楽曲の設定
 ```
 <source src="../music/自身のPC内の音楽ファイルを指定">
+```
