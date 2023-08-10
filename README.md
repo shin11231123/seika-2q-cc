@@ -13,5 +13,6 @@ npm run build
 ```
 npm run browser-sync
 ```
-# seika-2q-finaltask
-# seika-2q-finaltask
+3.楽曲の設定
+```
+<source src="../music/自身のPC内の音楽ファイルを指定">
